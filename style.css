@@ -1,0 +1,79 @@
+main{
+  height: 100vh;
+}
+
+header{
+  height: 50vh;
+  position: relative;
+  /* outline: solid red 3px; */
+}
+
+.button-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);
+}
+
+
+#fire {
+  backface-visibility: hidden;
+  background: #332cf2;
+  border: 0;
+  border-radius: .375rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,Helvetica,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.3;
+  padding: 1rem 1.25rem;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#fire:disabled {
+  color: #787878;
+  cursor: auto;
+}
+
+#fire:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+#fire:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+#fire:focus {
+  outline: 0 solid transparent;
+}
+
+#fire:focus:before {
+  border-width: .125rem;
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+#fire:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+#fire:not(:disabled):active {
+  transform: translateY(.125rem);
+}
