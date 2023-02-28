@@ -10,7 +10,10 @@ function fireConfetti() {
   console.log('bam!');
   jsConfetti.addConfetti({
     confettiColors: [
-      '#332cf2', '#9995f8'
+      '#ffbe0b', '#fb5607',
+      '#ff006e',
+      '#8338ec'
+      // '#E6C700'
     ],
   });
 };

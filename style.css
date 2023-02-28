@@ -1,23 +1,48 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
 main{
   height: 100vh;
+  background-color: #ffffff;
 }
 
-header{
+/* header {
+  outline: 1px solid red; 
+} */
+
+.button-container{
+  height: 100vh;
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* header{
   height: 50vh;
   position: relative;
-  /* outline: solid red 3px; */
-}
+  /* outline: solid red 3px;
+ } */
 
-.button-container {
+
+/* .button-container {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);
-}
+} */
 
 
-#fire {
+#fireButton {
   backface-visibility: hidden;
   background: #332cf2;
   border: 0;
@@ -42,24 +67,24 @@ header{
   touch-action: manipulation;
 }
 
-#fire:disabled {
+#fireButton:disabled {
   color: #787878;
   cursor: auto;
 }
 
-#fire:not(:disabled):hover {
+#fireButton:not(:disabled):hover {
   transform: scale(1.05);
 }
 
-#fire:not(:disabled):hover:active {
+#fireButton:not(:disabled):hover:active {
   transform: scale(1.05) translateY(.125rem);
 }
 
-#fire:focus {
+#fireButton:focus {
   outline: 0 solid transparent;
 }
 
-#fire:focus:before {
+#fireButton:focus:before {
   border-width: .125rem;
   content: "";
   left: calc(-1*.375rem);
@@ -70,10 +95,10 @@ header{
   user-select: none;
 }
 
-#fire:focus:not(:focus-visible) {
+#fireButton:focus:not(:focus-visible) {
   outline: 0 solid transparent;
 }
 
-#fire:not(:disabled):active {
+#fireButton:not(:disabled):active {
   transform: translateY(.125rem);
 }
